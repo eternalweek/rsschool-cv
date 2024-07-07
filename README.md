@@ -1,1 +1,1 @@
-# rsschool-cv
+https://eternalweek.github.io/rsschool-cv/

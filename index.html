@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href= "./styles/normalize.css">
+    <link rel="stylesheet" href="./styles/night-owl.min.css">
+    <link rel="stylesheet" href="./styles/styles.css">
+    <title>Eternal Week CV</title>
+</head>
+<body>
+    <header>
+        <div class="wave"></div>
+        <div class="wave"></div>
+        <div class="wave"></div>
+        <div class="headerWrapper">
+            <div class="myLogo">
+                <img class="myLogo" src="./img/2019may_15dd.png" alt="MyLogo">
+            </div>
+            <div class="infoAndContacts">
+                <div class="Info">
+                    <section id="aboutMyself">
+                        <h1 id="EternalWeek"><span>&nbsp;</span> Eternal Week</h1>
+                        <p><span>&nbsp;&nbsp;&nbsp;&nbsp;</span> Hello, my nickname is Eternal Week and I am trying to become a web programmer. I hope that soon my experience will be enough to start a professional career.</p>
+                    </section>
+                </div>
+                <div class="Contacts">
+                    <h2>Contacts:</h2>
+                    <a href="./index.html#modalWindowWrapperDiscord" title="show Discord">
+                        <img class="discord" src="./img/discord_logo2.png" alt="discord logo">
+                    </a>
+                    <a href="./index.html#modalWindowWrapperEmail" title="show e-mail">
+                        <img class="e-mail" src="./img/e-mail_logo.png" alt="e-mail logo">
+                    </a>
+                    <!-- change -->
+                </div>
+                <div class="contactsMobile">
+                    <h2>Contacts:</h2>
+                    <div class="contactsLogo">
+                        <a href="./index.html#modalWindowWrapperDiscord" title="show Discord">
+                            <img class="discord" src="./img/discord_logo2.png" alt="discord logo">
+                        </a>
+                        <a href="./index.html#modalWindowWrapperEmail" title="show e-mail">
+                            <img class="e-mail" src="./img/e-mail_logo.png" alt="e-mail logo">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <nav class="navigation">
+            <ul>
+                <li><a href="./index.html#aboutMyself">About myself</a></li>
+                <li><a href="./index.html#skills">Proffesional Skills</a></li>
+                <li><a href="./index.html#codeExample">Code Example</a></li>
+                <li><a href="./index.html#education">Education</a></li>
+                <li><a href="./index.html#experience">Work experience</a></li>
+                <li><a href="./index.html#languages">Languages</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div id="modalWindowWrapperEmail">
+        <div id="contactsWindowEmail" class="contactsWindowEmail">
+            <img src="./img/e-mail_logo.png" alt="e-mail logo">
+            <input id="myInput" type="text" readonly="" value="eternalweek.nes@gmail.com">
+            <div class="buttons">
+                <button type="button"  onclick="copyInputText()">copy to clipboard</button>
+                <a class="close" href="./index.html#" title="close this window">Close</a>
+            </div>
+        </div>
+    </div>
+    <div id="modalWindowWrapperDiscord">
+        <div id="contactsWindowDiscord" class="contactsWindowEmail">
+            <img src="./img/discord_logo2.png" alt="discord logo">
+            <input id="myInput2" type="text" readonly="" value="eternalweek">
+            <div class="buttons">
+                <button type="button"  onclick="copyInputText2()">copy to clipboard</button>
+                <a class="close" href="./index.html#" title="close this window">Close</a>
+            </div>
+        </div>
+    </div>
+    <main class="main">
+        <section id="skills" class="skills">
+            <h2>Professional skills:</h2>
+            <ul>
+                <li><span>&nbsp;&nbsp;&nbsp;&nbsp;</span>C++ Basics</li>
+                <li><span>&nbsp;&nbsp;&nbsp;&nbsp;</span>JavaScript Basics</li>
+                <li><span>&nbsp;&nbsp;&nbsp;&nbsp;</span>HTML + CSS Basics</li>
+                <li><span>&nbsp;&nbsp;&nbsp;&nbsp;</span>Unity Basics(C#)</li>
+                <li><span>&nbsp;&nbsp;&nbsp;&nbsp;</span>Adobe Photoshop</li>
+                <li><span>&nbsp;&nbsp;&nbsp;&nbsp;</span>Microsoft Office(Exel, Word, PowerPoint)</li>
+            </ul>
+        </section>
+        <div id="codeExample">
+            <section class="codeExample">
+                <h2>Code Example:</h2>
+                <pre>                    <code class="hljs language-javascript codeTab">
+    <span class="hljs-comment">//Merge two sorted arrays into one.</span>
+    <span class="hljs-keyword">function</span> <span class="hljs-title function_">mergeArrays</span>(<span class="hljs-params">arr1, arr2</span>) {
+
+    <span class="hljs-keyword">let</span> result  = arr1.<span class="hljs-title function_">concat</span>(...arr2);
+    result.<span class="hljs-title function_">sort</span>(<span class="hljs-function">(<span class="hljs-params">a, b</span>) =&gt;</span> (a - b));
+    result = result.<span class="hljs-title function_">filter</span>(<span class="hljs-function">(<span class="hljs-params">item,index</span>) =&gt;</span> result.<span class="hljs-title function_">indexOf</span>(item) === index);
+
+    <span class="hljs-keyword">return</span> result;
+    }
+                    </code>
+                </pre>
+            </section>
+            <section class="codeExampleMobileVersion">
+                <h2>Code Example:</h2>
+                <pre>                    <code class="hljs language-javascript">
+    <span class="hljs-comment">//Merge two sorted arrays into one.</span>
+    <span class="hljs-keyword">function</span> <span class="hljs-title function_">mergeArrays</span>(<span class="hljs-params">arr1, arr2</span>) {
+
+    <span class="hljs-keyword">let</span> result  = arr1.<span class="hljs-title function_">concat</span>(...arr2);
+    result.<span class="hljs-title function_">sort</span>(<span class="hljs-function">(<span class="hljs-params">a, b</span>) =&gt;</span> (a - b));
+    result = result.<span class="hljs-title function_">filter</span>(<span class="hljs-function">(<span class="hljs-params">item,index</span>) =&gt;</span>
+    result.<span class="hljs-title function_">indexOf</span>(item) === index);
+
+    <span class="hljs-keyword">return</span> result;
+    }
+                    </code>
+                </pre>
+            </section>
+        </div>
+        <section id="education" class="education">
+            <h2>Education and courses:</h2>
+            <ul>
+                <li>
+                    <a href="https://www.ugtu.net/" title="link to my University" target="_blank">Ukhta State Technical University</a>
+                        <ul>
+                            <li>Bachelor degree in the Timber Industry Engineering (2016)</li>
+                            <li>Master degree in Timber Industry Engineering (2018)</li>
+                            <li>Advanced training: Design, construction and operation of transportation and storage of oil and gas (2018)</li>
+                        </ul>
+                </li>
+                <li>Online courses:
+                    <ul>
+                        <li><a href="https://www.udemy.com/course/unity-2019/" title="link to online course" target="_blank">Building a 2D platformer with Unity</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </section>
+        <section id="experience" class="experience">
+            <h2>Work experience:</h2>
+            <ul>
+                <li>Asphalt laboratory technician (2022)</li>
+                <li>Road diagnostics and inspection (2023 - 2024)</li>
+            </ul>
+        </section>
+        <section id="languages" class="languages">
+            <h2>Languages:</h2>
+            <ul>
+                <li>Russian - native speaker</li>
+                <li>English - Intermediate (according to the online test at <a href="https://www.efset.org/" title="link to EFSET" target="_blank"><img src="./img/efset-logo_black.svg" alt="EFSET logo"></a>)</li>
+            </ul>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="footerWrapper">
+            <div class="rsschool">
+            <a href="https://rs.school/courses/javascript-preschool-ru" target="_blank" title="link to The Rolling Scopes School">
+                <img src="./img/rs_school.svg" alt="rs school logo">
+            </a>
+            </div>
+            <div class="yearAndCopyRights">
+                <a href="./index.html#EternalWeek" title="Eternal Week logo">
+                    <img src="./img/MyLogo1.png" alt="My Logo">
+                </a>
+                <br>
+                2024.All rights reserved.☺
+            </div>
+            <div class="myGitHub">
+                <a href="https://github.com/eternalweek/" target="_blank" title="link to my github">
+                    <img src="./img/25231.png" alt="GitHub logo">
+                </a>
+            </div>
+        </div>
+    </footer>
+    <script src="./scripts/highlight.min.js"> </script>
+    <script src="./scripts/copyToClipBoard.js"></script>
+    <script>hljs.highlightAll();</script>
+</body></html>
