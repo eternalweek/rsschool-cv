@@ -1,0 +1,572 @@
+/* Study attempt to use css(flex,media queries,keyframes etc.)Funny but not clear =) */
+body {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background: rgb(224,224,224);
+    background: radial-gradient(circle, rgba(224,224,224,1) 0%, rgba(103,67,79,1) 78%, rgba(0,0,0,1) 100%);
+}  
+@keyframes showWindow {
+    0% {
+        height: 0px;
+        width: 100%;
+    }
+    100% {
+        height: 300px;
+        width: 100%;
+    }
+}
+@keyframes closeWindow {
+    0% {
+        height: 300px;
+    }
+    100% {
+        height: 0px;
+    }
+}
+#modalWindowWrapperDiscord {
+    display: none;
+    background-color: #121212;  
+}
+#modalWindowWrapperEmail {
+    display: none;
+    background-color: #121212;  
+}
+#modalWindowWrapperDiscord:target {
+
+    display:flex;
+    animation: showWindow 0.5s linear;
+}
+#modalWindowWrapperEmail:target {
+    display:flex;
+    animation: showWindow 0.5s linear;
+}
+.contactsWindowEmail{
+    margin: 0 auto;
+    width: 30vw;
+    height: 30vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    background-color: rgb(203, 173, 165);
+    border: 2px solid #67434F;
+    border-radius: 5px;
+}
+.contactsWindowEmail p {
+    background-color: #67434F;
+    border: 0.3px solid black;
+    border-radius: 5px;
+    padding: 3px 5px;
+    width: 80%;
+    font-size: 20px;
+}
+.contactsWindowEmail img {
+    margin-top: 10px;
+    height: 80px;
+}
+input {
+    text-align: center;
+    border-radius: 5px;
+    background-color: #67434F;
+}
+.buttons {
+   margin-bottom: 10%;
+    width: 100%;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+}
+.buttons a{
+    text-decoration: none;
+        color: black;
+        padding: 5px;
+        background-color: #ffffff;
+        border: 0.3px solid black;
+        border-radius: 5px;
+        width: 70%;
+        margin-bottom: 5px;
+}
+.buttons button{
+    text-decoration: none;
+        color: black;
+        padding: 5px;
+        background-color: #ffffff;
+        border: 0.3px solid black;
+        border-radius: 5px;
+        width: 73%;
+        margin-bottom: 5px;
+}
+@media (max-width:901px){
+    .contactsWindowEmail{
+        width: 60vw;
+        height: 60vw;
+    }
+}
+@media (max-width:458px) {
+    .contactsWindowEmail{
+        width: 90vw;
+        min-height: 90vw;
+    }
+    .contactsWindowEmail p {
+        font-size: 14px;
+    }
+    .contactsWindowEmail img {
+        margin-top: 10px;
+        height: 80px;
+    }
+}
+@media (max-width:236px){
+    .contactsWindowEmail{
+        width: 90vw;
+        min-height: 100vw;
+    }
+    .contactsWindowEmail p {
+        font-size: 6vw;
+    }
+    .buttons a{
+        font-size: 6vw;
+    }
+    .contactsWindowEmail img {
+        margin-top: 10px;
+        height: 40vw;
+    }
+}
+/* HEADER */
+header {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+/* Add CSS only animation for Background 
+(Just for Fun) */
+@keyframes gradient {
+    0% {
+        background-position: 0% 0%;
+    }
+    50% {
+        background-position: 100% 100%;
+    }
+    100% {
+        background-position: 0% 0%;
+    }
+}
+
+.wave {
+    background: rgb(255 255 255 / 25%);
+    border-radius: 1000% 1000% 0 0;
+    position: fixed;
+    width: 200%;
+    height: 12em;
+    animation: wave 10s -3s linear infinite;
+    transform: translate3d(0, 0, 0);
+    opacity: 0.8;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.wave:nth-of-type(2) {
+    bottom: -1.25em;
+    animation: wave 18s linear reverse infinite;
+    opacity: 0.8;
+}
+
+.wave:nth-of-type(3) {
+    bottom: -2.5em;
+    animation: wave 20s -1s reverse infinite;
+    opacity: 0.9;
+}
+
+@keyframes wave {
+    2% {
+        transform: translateX(1);
+    }
+
+    25% {
+        transform: translateX(-25%);
+    }
+
+    50% {
+        transform: translateX(-50%);
+    }
+
+    75% {
+        transform: translateX(-25%);
+    }
+
+    100% {
+        transform: translateX(1);
+    }
+}
+/* end here */
+.headerWrapper{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    margin-top: 1%;
+    padding-bottom: 5px;
+    background-color: rgba(1,1,1,0.7);
+    color: white;
+    border-radius: 5px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+.infoAndContacts{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+    text-shadow: 2px 1px 0 black;
+}
+.Info{
+    width: 100%; 
+    display: flex;
+     flex-direction: row;
+     align-items: center;
+     justify-content: center;
+     padding-left: 3%;
+}
+.contactsMobile{
+    display: none;
+}
+.Contacts {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+.Contacts img {
+    max-height: 7vw;
+    max-width: 7vw;
+}
+/* NAVIGATION(in header) */
+.navigation{
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgba(1,1,1,0.7);
+    border-radius: 5px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    margin-bottom: 10px;
+}
+.navigation ul {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-inline-start: 0;
+  margin: 0;
+  flex-wrap: wrap;
+}
+.navigation ul li{
+
+    display: flex;
+    list-style: none;
+    height: fit-content;
+    flex-grow: 0;
+    flex-shrink: 0;
+}
+.navigation ul li a {
+    text-decoration: none;
+    color: black;
+    background-color: rgb(95, 100, 100);
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 0.3rem;
+}
+.navigation ul li a:hover {
+    background-color:#67434F;
+}
+.myLogo{
+    height: 150px;
+    width: 150px;
+    height: 20vw;
+    width: 20vw;
+    border-radius: 50%;
+    flex-shrink: 0;
+    margin: 3px;
+}
+/* MAIN */
+.main {
+    min-height: 100vh;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.main section {
+    border-radius: 5px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.main section h2 {
+    text-align: center;
+}
+.skills li {
+    list-style: none;
+}
+.skills li::before{
+    content: '►';
+    font-size: 15px;
+}
+pre {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+code {
+   margin-left: 10px;
+   margin-right: 10px;
+   border-radius: 5px;
+   overflow-y: hidden;
+}
+.codeExampleMobileVersion{
+    display: none;
+}
+.education a {
+   text-decoration:underline;
+   color: #463037;
+   text-shadow: 1px 0px 0 black;
+}
+/* FOOTER */
+.footer{
+    border-top: 2px solid rgba(0,0,0,0.8);
+        background: linear-gradient(271deg, #a86f5e, #bcd4db, #121212);
+        background-size: 600% 600%;
+        animation: AnimationName 20s ease infinite;
+    width: 100%;
+    min-height: 20%;
+    background-color: #C3CCAF;;
+    display: flex;
+    flex-direction: column  ;
+    justify-content: space-between;
+    align-items: center;
+}
+@keyframes AnimationName {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 51%}
+    100%{background-position:0% 50%}
+}
+.footerWrapper{
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.footerWrapper img {
+    height: 70px;
+    width: 70px;
+}
+.rsschool{
+    align-self: flex-end;
+}
+.rsschool img {
+    height: 100px;
+    width: 100px;
+}
+.yearAndCopyRights{
+    align-self:flex-end;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+}
+.yearAndCopyRights img {
+    margin-top: 10px;
+    margin-left: auto;
+ margin-right: auto;
+}
+@media (min-width:1250px) {
+    
+    body{
+        background-color: white;
+    }
+
+    *{
+        font-size: 20px;
+     }
+
+     .Contacts img {
+        height: 5vw;
+        width: 5vw;
+     }
+     .myLogo {
+        width: 20vw;
+        height: 20vw;
+     }
+ }
+
+ @media (min-width:2500px){
+    *{
+        font-size: 40px;
+    }
+ }
+ @media (max-width:852px) {
+     /* MAIN */
+     .codeExample {
+        display: none;
+    }
+    .codeExampleMobileVersion{
+        display:block;
+    }
+ }
+@media (max-width:580px){
+    .headerWrapper{
+        display: flex;
+        flex-direction: column;
+    }
+    .myLogo{
+        height: 40vw;
+        width: 40vw;
+    }
+    .infoAndContacts {
+        flex-wrap: wrap;
+    }
+    .Contacts{
+        display: none;
+    }
+    .contactsMobile{
+        width: 100%;
+        
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        font-size: 12px;
+    }
+    .contactsLogo{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content:space-around     ;
+    }
+    .contactsLogo img {
+        width: 2.5rem;
+        height: 2.5rem;
+    }
+  
+    .Info {
+        font-size: 3vw;
+    }
+    .navigation ul {
+        flex-direction: column;
+        align-items: center ;
+        justify-content: space-between;
+    }
+    .navigation ul li{
+        margin-bottom: 0.5rem;
+        justify-content: center;
+    }
+    .navigation ul:first-child {
+        margin-top: 0.5rem;
+    }
+    .navigation ul li a{
+        padding-left: 3rem;
+        padding-right: 3rem;
+        border-radius: 10%;
+       min-width: 110px;
+        max-width: 80vw;
+        text-align: center;
+    }
+    /* FOOTER */
+    .footerWrapper {
+        font-size: 4vw;
+    }
+    .footerWrapper img {
+        height: 9vw;
+        width: 9vw;
+    }
+    .rsschool img {
+        min-height: 10vw;
+        min-width: 10vw;
+    }
+}
+@media(max-width:375px){
+    .headerWrapper{
+        min-width: 100%;
+    }
+    .navigation{
+        min-width: 100vw;
+    }
+    .Info{
+        font-size: 10px;
+    }
+    .Info h1 {
+        font-size: 12px;
+        text-align: center;
+    }
+    .navigation {
+        font-size: 10px;
+    }
+    .navigation ul li a {
+        padding: 0;
+        min-width: 80vw;
+        text-align: center;
+        padding-top: 3px;
+        padding-bottom: 3px;
+    }
+    .Contacts{
+        flex-direction: column;
+        justify-content: space-between;
+        font-size: 12px;
+    }
+    .Contacts img{
+        min-width: 25px;
+        min-height: 25px;
+    }
+}
+@media (max-width:785px){
+    .navigation ul {
+        flex-direction: column;
+    }
+     .navigation ul li a{
+         min-width: 50vw;
+         text-align: center;
+         margin: 5px;
+     }
+     .infoAndContacts {
+        flex-wrap: wrap;
+    }
+     .Contacts{
+        display: none;
+    }
+    .contactsMobile{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        font-size: 12px;
+    }
+    .contactsLogo{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content:space-around;
+    }
+    .contactsLogo img {
+        width: 2.5rem;
+        height: 2.5rem;
+    }
+ }
+ .main section {
+    background-color: rgba(1,1,1,0.3);
+ }
+#EternalWeek {
+    display: flex;
+}
+
